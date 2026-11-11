@@ -184,7 +184,9 @@ It is an index and an orientation page, not a dumping ground. If a section of it
 
 Every `General.md` contains a `## Contents` section: a map of the folder, so a reader can see what is inside and decide what to open **without clicking through every file**.
 
-```markdown
+Write it like this:
+
+~~~markdown
 ## Contents
 
 A short map of everything in this folder, so you can find what you need without opening each file.
@@ -194,7 +196,17 @@ A short map of everything in this folder, so you can find what you need without 
 | **[[Missions/General\|Missions]]** | Folder | Mission records owned here. |
 | [[How To - Create an IAM Policy]] | Note | Creating a least-privilege IAM policy, step by step. |
 | [[Access Review 2026.pdf]] | PDF | The signed access review report delivered in November. |
-```
+~~~
+
+And it renders like this:
+
+| Item | Type | What it is about |
+| --- | --- | --- |
+| **Missions** | Folder | Mission records owned here. |
+| How To - Create an IAM Policy | Note | Creating a least-privilege IAM policy, step by step. |
+| Access Review 2026.pdf | PDF | The signed access review report delivered in November. |
+
+> The `\|` in the first row is not a typo. A `|` inside a table cell ends the cell, so the pipe of a wiki-link alias (`[[Missions/General|Missions]]`) must be escaped as `\|`. Obsidian renders the link correctly; without the backslash the row breaks.
 
 Rules:
 
